@@ -15,17 +15,13 @@ A production-style ERP + CRM operations platform built for Fundsroom Infotech to
 
 ## 🚀 Live Demo
 
-<p align="center">
-
 **[🌐 Open Live Application](https://fundsroom-infotech-client.vercel.app/)**
 
 **[⚙️ Open Backend API](https://fundsroom-api-u6tm.onrender.com)**
 
-</p>
-
 ---
 
-## 📚 Complete Documentation
+## 📚 Documentation
 
 The complete project documentation covers:
 
@@ -44,65 +40,57 @@ The complete project documentation covers:
 - Screenshots
 - Limitations & Future Scope
 
-<p align="center">
-
-### [📖 Open Fundsroom Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
-
-</p>
+**[📖 Open Complete Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)**
 
 ---
 
-## 🖥️ Product Preview
+## 🖥️ Application Preview
 
-<p align="center">
-  <img
-    src="docs/public/assets/screenshots/landing_page_1.png"
-    alt="Fundsroom Mini ERP + CRM Operations Portal landing page"
-    width="950"
-  />
-</p>
+<table>
+<tr>
+<td width="50%">
 
----
+<img src="docs/public/assets/screenshots/landing_page_1.png" alt="Fundsroom Landing Page" width="100%">
 
-## 📸 Application Preview
+<p align="center"><b>Landing Page</b></p>
 
-### Dashboard
+</td>
 
-<p align="center">
-  <img src="docs/public/assets/screenshots/admin_dashboard.png" alt="ERP dashboard" width="900" />
-</p>
+<td width="50%">
 
-### Customer CRM
+<img src="docs/public/assets/screenshots/admin_dashboard.png" alt="Fundsroom Dashboard" width="100%">
 
-<p align="center">
-  <img src="docs/public/assets/screenshots/admin_customer.png" alt="Customer CRM" width="900" />
-</p>
+<p align="center"><b>Dashboard</b></p>
 
-### Products & Inventory
+</td>
+</tr>
 
-<p align="center">
-  <img src="docs/public/assets/screenshots/admin_products.png" alt="Products and inventory" width="900" />
-</p>
+<tr>
+<td width="50%">
 
-### Sales Challans
+<img src="docs/public/assets/screenshots/admin_customer.png" alt="Customer CRM" width="100%">
 
-<p align="center">
-  <img src="docs/public/assets/screenshots/admin_challans.png" alt="Sales challans" width="900" />
-</p>
+<p align="center"><b>Customer CRM</b></p>
 
-### Authentication & RBAC
+</td>
 
-<p align="center">
-  <img src="docs/public/assets/screenshots/rbac_signin.png" alt="Authentication and role based access" width="900" />
-</p>
+<td width="50%">
+
+<img src="docs/public/assets/screenshots/admin_products.png" alt="Products and Inventory" width="100%">
+
+<p align="center"><b>Products & Inventory</b></p>
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📌 Overview
 
-The Mini ERP + CRM Operations Portal is a full-stack business operations platform designed for wholesale and distribution workflows.
+The Mini ERP + CRM Operations Portal is a full-stack business operations system designed for wholesale and distribution workflows.
 
-It centralizes:
+It brings together:
 
 - Customer CRM
 - Products
@@ -117,91 +105,36 @@ It centralizes:
 
 ## 🎯 Problem
 
-Wholesale and distribution operations require multiple teams to work with shared business information while maintaining role-specific access.
+The system is designed for a wholesale/distribution business where Sales, Warehouse, Accounts, and Admin users need shared operational data while maintaining role-specific access.
 
-The system needs to coordinate:
-
-- Customers
-- Sales workflows
-- Products
-- Warehouse stock
-- Stock movements
-- Challans
-- Accounts operations
-
-without giving every user unrestricted access.
+The case study specifically requires authentication, CRM, inventory, stock movement, and sales challan workflows.
 
 ---
 
 ## 💡 Solution
 
-The portal provides a centralized operations platform with:
+The portal provides one centralized system for:
 
-- JWT authentication
-- Role-based access control
-- Customer CRM workflows
+- Customer management
 - Product management
-- Inventory management
-- Stock movement tracking
-- Sales challan workflows
-- PostgreSQL persistence
-- Transaction-safe stock operations
+- Inventory tracking
+- Stock movement auditing
+- Sales challans
+- CRM follow-ups
+- Role-based access
 
 ---
 
 ## ✨ Key Features
 
-### 🔐 Authentication & RBAC
-
-JWT-based authentication with:
-
-- ADMIN
-- SALES
-- WAREHOUSE
-- ACCOUNTS
-
-### 👥 Customer CRM
-
-- Customer management
-- Search
-- Customer details
-- Follow-up tracking
-- Customer status management
-
-### 📦 Products & Inventory
-
-- Product catalog
-- SKU management
-- Categories
-- Pricing
-- Stock levels
-- Low-stock visibility
-- Stock adjustments
-
-### 📊 Stock Ledger
-
-- IN / OUT movements
-- Audit history
-- User tracking
-- Timestamps
-
-### 🧾 Sales Challans
-
-- Draft challans
-- Multiple product items
-- Quantity management
-- Confirmation
-- Cancellation
-- Product snapshots
-- Transaction-safe stock deduction
-
-### 📈 Dashboard
-
-- Customer summaries
-- Product summaries
-- Low-stock visibility
-- Stock activity
-- Challan activity
+| Module | Highlights |
+|---|---|
+| 🔐 Authentication | JWT authentication + RBAC |
+| 👥 Customer CRM | Add, edit, search, details, follow-ups |
+| 📦 Products | SKU, category, pricing, stock |
+| 📊 Inventory | IN/OUT movements and low-stock visibility |
+| 🧾 Challans | Draft, confirm, cancel, multiple products |
+| 📈 Dashboard | Operational summaries and recent activity |
 
 ---
 
@@ -214,30 +147,35 @@ JWT-based authentication with:
 | WAREHOUSE | Inventory and stock operations |
 | ACCOUNTS | Customer, product and challan operations |
 
-[View Complete Authentication & RBAC Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
+**Role authorization is enforced server-side; the login role selection is only verified against the user's actual database role.**
+
+[View Authentication & RBAC Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
 
 ---
 
 ## 🏗️ Architecture
 
 ```text
-                         USER
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │ React Frontend  │
-                 │     Vercel      │
-                 └────────┬────────┘
-                          │ HTTPS
-                          ▼
-                 ┌─────────────────┐
-                 │ Express Backend │
-                 │     Render      │
-                 └────────┬────────┘
-                          │ pg
-                          ▼
-                 ┌─────────────────┐
-                 │ PostgreSQL DB   │
-                 │    Supabase     │
-                 └─────────────────┘
+User
+ │
+ ▼
+React Frontend
+(Vercel)
+ │
+ │ HTTPS / REST API
+ ▼
+Express Backend
+(Render)
+ │
+ │ pg
+ ▼
+Supabase PostgreSQL
 ```
+
+---
+
+## 💻 Setup & Deployment
+
+Detailed instructions for local setup, Docker configuration, demo credentials, deployment instructions, and project limitations are fully documented on the project website.
+
+**[📖 View Full Setup Instructions in Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)**
