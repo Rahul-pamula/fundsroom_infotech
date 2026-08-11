@@ -153,11 +153,13 @@ The portal provides one centralized system for:
 
 **Role authorization is enforced server-side; the login role selection is only verified against the user's actual database role.**
 
-[View Authentication & RBAC Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
+[View Authentication & RBAC Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/security/authentication.html)
 
 ---
 
 ## 🏗️ Architecture
+
+[View Architecture Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/system-design/architecture.html)
 
 ```text
 User
@@ -176,10 +178,4 @@ Express Backend
 Supabase PostgreSQL
 ```
 
----
 
-## 💻 Setup & Deployment
-
-Detailed instructions for local setup, Docker configuration, demo credentials, deployment instructions, and project limitations are fully documented on the project website.
-
-**[📖 View Full Setup Instructions in Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)**
