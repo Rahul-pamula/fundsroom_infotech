@@ -1,10 +1,8 @@
 # 🛠️ Setup Guide
 
-> **[ 📖 README ](README.md) &nbsp; | &nbsp; [ 🛠️ Setup Guide ](SETUP.md) &nbsp; | &nbsp; [ 🌐 Full Documentation ](https://rahul-pamula.github.io/fundsroom_infotech/)**
+Get the **Fundsroom Mini ERP + CRM Operations Portal** running on your local machine in minutes.
 
 ---
-
-Get the **Fundsroom Mini ERP + CRM Operations Portal** running on your local machine in minutes.
 
 ## Prerequisites
 
