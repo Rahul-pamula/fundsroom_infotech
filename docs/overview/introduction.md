@@ -18,5 +18,10 @@ The platform is designed around the following unified workflow:
 3. **Product**: Warehouse or Admin adds product catalogs, determining SKU, pricing, and initial stock via Stock Movements.
 4. **Inventory**: The system tracks all inventory balances, preventing stockouts and negative quantities.
 5. **Sales Challan**: Sales generates a draft order (Challan) for the customer's products.
-6. **Stock Movement**: Upon confirming the challan, the system atomically deducts stock and records an immutable ledger entry.
 7. **Dashboard / Operational Tracking**: Executives and operators monitor active leads, stock levels, and daily sales dispatches via a centralized dashboard.
+
+## Visual Reference
+![Landing Page 1](/assets/screenshots/landing_page_1.png)
+![Landing Page 2](/assets/screenshots/landing_page_2.png)
+![Landing Page 3](/assets/screenshots/landing_page_3.png)
+![Landing Page 4](/assets/screenshots/landing_page_4.png)

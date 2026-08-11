@@ -1,0 +1,17 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "Welcome to the documentation for the **Mini ERP + CRM Operations Portal**. This system is designed specifically for small-to-medium wholesale and distribution businesses, bridging essential operational functions across sales teams, warehouse personnel, accounts departments, and executive administration.",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev", "docs:build": "vitepress build", "docs:preview": "vitepress preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.41"
+  }
+}
