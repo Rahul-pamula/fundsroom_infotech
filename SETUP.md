@@ -95,5 +95,5 @@ npm run dev
 The application is now accessible at `http://localhost:5173`. 
 You can log in using the seeded admin credentials:
 
-- **Email:** `admin@fundsroom.com`
-- **Password:** `admin123`
+- **Email:** `admin@fundsroom.local`
+- **Password:** `Password123!`

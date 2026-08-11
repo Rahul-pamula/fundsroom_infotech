@@ -157,6 +157,20 @@ The portal provides one centralized system for:
 
 ---
 
+## 🔑 Test Credentials
+
+Use the following credentials to test the live application across different roles.
+All accounts use the same password: **`Password123!`**
+
+| Role | Email |
+|---|---|
+| **ADMIN** | `admin@fundsroom.local` |
+| **SALES** | `sales@fundsroom.local` |
+| **WAREHOUSE** | `warehouse@fundsroom.local` |
+| **ACCOUNTS** | `accounts@fundsroom.local` |
+
+---
+
 ## 🏗️ Architecture
 
 [View Architecture Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/system-design/architecture.html)
