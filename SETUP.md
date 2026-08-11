@@ -48,13 +48,22 @@ JWT_SECRET=your_super_secret_jwt_key_change_me
 VITE_API_BASE_URL=http://localhost:5001/api
 ```
 
-## 3. Database Setup (Docker)
+## 3. Database Setup
 
+You can run the PostgreSQL database using either **Docker** or a **Local PostgreSQL Installation**.
+
+### Option A: Using Docker (Recommended)
 Start the local PostgreSQL database using the provided Docker Compose file:
-
 ```bash
 docker-compose up -d
 ```
+
+### Option B: Local PostgreSQL Installation
+If you do not have Docker installed, you can use a local installation of PostgreSQL:
+1. Ensure PostgreSQL is installed and running on your machine.
+2. Open your `psql` terminal or pgAdmin.
+3. Create a new database named `fundsroom_db`.
+4. Update the `DATABASE_URL` in `server/.env` to match your local PostgreSQL credentials (e.g. `postgresql://your_user:your_password@localhost:5432/fundsroom_db`).
 
 ## 4. Migration and Seeding
 
