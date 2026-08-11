@@ -11,15 +11,21 @@ A production-style ERP + CRM operations platform built for Fundsroom Infotech to
 ![JWT](https://img.shields.io/badge/-JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white)
 
+---
+
 ## 🚀 Live Demo
 
-Frontend:  
-[🌐 Open Fundsroom Application](https://fundsroom-infotech-client.vercel.app/)
+<p align="center">
 
-Backend:  
-[⚙️ Open Backend API](https://fundsroom-api-u6tm.onrender.com)
+**[🌐 Open Live Application](https://fundsroom-infotech-client.vercel.app/)**
 
-## 📚 Full Documentation
+**[⚙️ Open Backend API](https://fundsroom-api-u6tm.onrender.com)**
+
+</p>
+
+---
+
+## 📚 Complete Documentation
 
 The complete project documentation covers:
 
@@ -38,77 +44,166 @@ The complete project documentation covers:
 - Screenshots
 - Limitations & Future Scope
 
-[📖 Read the Full Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
+<p align="center">
+
+### [📖 Open Fundsroom Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
+
+</p>
+
+---
 
 ## 🖥️ Product Preview
 
 <p align="center">
-  <img src="docs/public/assets/screenshots/landing_page_1.png" alt="Fundsroom Mini ERP + CRM Operations Portal" width="900">
+  <img
+    src="docs/public/assets/screenshots/landing_page_1.png"
+    alt="Fundsroom Mini ERP + CRM Operations Portal landing page"
+    width="950"
+  />
 </p>
+
+---
+
+## 📸 Application Preview
+
+### Dashboard
+
+<p align="center">
+  <img src="docs/public/assets/screenshots/admin_dashboard.png" alt="ERP dashboard" width="900" />
+</p>
+
+### Customer CRM
+
+<p align="center">
+  <img src="docs/public/assets/screenshots/admin_customer.png" alt="Customer CRM" width="900" />
+</p>
+
+### Products & Inventory
+
+<p align="center">
+  <img src="docs/public/assets/screenshots/admin_products.png" alt="Products and inventory" width="900" />
+</p>
+
+### Sales Challans
+
+<p align="center">
+  <img src="docs/public/assets/screenshots/admin_challans.png" alt="Sales challans" width="900" />
+</p>
+
+### Authentication & RBAC
+
+<p align="center">
+  <img src="docs/public/assets/screenshots/rbac_signin.png" alt="Authentication and role based access" width="900" />
+</p>
+
+---
 
 ## 📌 Overview
 
-Fundsroom Infotech's Mini ERP + CRM Operations Portal is a full-stack business operations system designed for wholesale/distribution workflows. 
+The Mini ERP + CRM Operations Portal is a full-stack business operations platform designed for wholesale and distribution workflows.
 
-It brings together:
+It centralizes:
+
 - Customer CRM
-- Product management
+- Products
 - Inventory
 - Stock movements
 - Sales challans
+- Follow-ups
 - Authentication
-- RBAC
+- Role-based access control
+
+---
 
 ## 🎯 Problem
 
-Businesses need different teams such as:
-- Sales
-- Warehouse
-- Accounts
-- Administration
+Wholesale and distribution operations require multiple teams to work with shared business information while maintaining role-specific access.
 
-to work with shared customer, product, inventory, and sales information while maintaining role-specific access.
+The system needs to coordinate:
+
+- Customers
+- Sales workflows
+- Products
+- Warehouse stock
+- Stock movements
+- Challans
+- Accounts operations
+
+without giving every user unrestricted access.
+
+---
 
 ## 💡 Solution
 
-The portal provides a centralized operations system with:
+The portal provides a centralized operations platform with:
+
 - JWT authentication
 - Role-based access control
-- CRM workflows
+- Customer CRM workflows
+- Product management
 - Inventory management
-- Transaction-safe stock operations
+- Stock movement tracking
 - Sales challan workflows
 - PostgreSQL persistence
+- Transaction-safe stock operations
+
+---
 
 ## ✨ Key Features
 
 ### 🔐 Authentication & RBAC
-JWT authentication with roles for: `ADMIN`, `SALES`, `WAREHOUSE`, and `ACCOUNTS`.
+
+JWT-based authentication with:
+
+- ADMIN
+- SALES
+- WAREHOUSE
+- ACCOUNTS
 
 ### 👥 Customer CRM
-Customer management, search, details, and follow-ups.
+
+- Customer management
+- Search
+- Customer details
+- Follow-up tracking
+- Customer status management
 
 ### 📦 Products & Inventory
-Product catalog, stock levels, low-stock visibility, and stock adjustments.
+
+- Product catalog
+- SKU management
+- Categories
+- Pricing
+- Stock levels
+- Low-stock visibility
+- Stock adjustments
 
 ### 📊 Stock Ledger
-Auditable IN / OUT stock movement history.
+
+- IN / OUT movements
+- Audit history
+- User tracking
+- Timestamps
 
 ### 🧾 Sales Challans
-Draft, confirm, and cancel workflows with transaction-safe stock deduction.
+
+- Draft challans
+- Multiple product items
+- Quantity management
+- Confirmation
+- Cancellation
+- Product snapshots
+- Transaction-safe stock deduction
 
 ### 📈 Dashboard
-Operational summaries, customer statistics, inventory visibility, and recent activity.
 
-## 📸 Application Preview
+- Customer summaries
+- Product summaries
+- Low-stock visibility
+- Stock activity
+- Challan activity
 
-<p align="center">
-  <img src="docs/public/assets/screenshots/admin_dashboard.png" alt="Dashboard" width="400">
-  <img src="docs/public/assets/screenshots/admin_customer.png" alt="Customer CRM" width="400">
-  <img src="docs/public/assets/screenshots/admin_products.png" alt="Products Inventory" width="400">
-  <img src="docs/public/assets/screenshots/admin_challans.png" alt="Challans" width="400">
-  <img src="docs/public/assets/screenshots/rbac_signin.png" alt="Login & RBAC" width="400">
-</p>
+---
 
 ## 🛡️ Role-Based Access
 
@@ -117,32 +212,32 @@ Operational summaries, customer statistics, inventory visibility, and recent act
 | ADMIN | Full operational control |
 | SALES | Customer and sales workflows |
 | WAREHOUSE | Inventory and stock operations |
-| ACCOUNTS | Customer, product and challan access |
+| ACCOUNTS | Customer, product and challan operations |
 
-[View Authentication & RBAC Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
+[View Complete Authentication & RBAC Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
+
+---
 
 ## 🏗️ Architecture
 
 ```text
-                    ┌─────────────────┐
-                    │      User       │
-                    └────────┬────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │ React Frontend  │
-                    │    Vercel       │
-                    └────────┬────────┘
-                             │ HTTPS
-                             ▼
-                    ┌─────────────────┐
-                    │ Express Backend │
-                    │     Render      │
-                    └────────┬────────┘
-                             │ pg
-                             ▼
-                    ┌─────────────────┐
-                    │   PostgreSQL    │
-                    │    Supabase     │
-                    └─────────────────┘
+                         USER
+                          │
+                          ▼
+                 ┌─────────────────┐
+                 │ React Frontend  │
+                 │     Vercel      │
+                 └────────┬────────┘
+                          │ HTTPS
+                          ▼
+                 ┌─────────────────┐
+                 │ Express Backend │
+                 │     Render      │
+                 └────────┬────────┘
+                          │ pg
+                          ▼
+                 ┌─────────────────┐
+                 │ PostgreSQL DB   │
+                 │    Supabase     │
+                 └─────────────────┘
 ```
