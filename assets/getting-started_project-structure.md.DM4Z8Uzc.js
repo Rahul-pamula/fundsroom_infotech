@@ -1,0 +1,32 @@
+import{_ as a,o as n,c as e,a2 as p}from"./chunks/framework.Ce1WstT_.js";const h=JSON.parse('{"title":"8. Project Structure","description":"","frontmatter":{},"headers":[],"relativePath":"getting-started/project-structure.md","filePath":"getting-started/project-structure.md"}'),t={name:"getting-started/project-structure.md"};function r(o,s,c,i,l,d){return n(),e("div",null,[...s[0]||(s[0]=[p(`<h1 id="_8-project-structure" tabindex="-1">8. Project Structure <a class="header-anchor" href="#_8-project-structure" aria-label="Permalink to &quot;8. Project Structure&quot;">​</a></h1><p>The repository is divided into two primary workspaces: <code>client/</code> and <code>server/</code>.</p><h2 id="repository-layout" tabindex="-1">Repository Layout <a class="header-anchor" href="#repository-layout" aria-label="Permalink to &quot;Repository Layout&quot;">​</a></h2><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>mini-erp-crm/</span></span>
+<span class="line"><span>├── .github/                      # CI/CD Workflows</span></span>
+<span class="line"><span>├── client/                       # React Frontend</span></span>
+<span class="line"><span>│   ├── src/</span></span>
+<span class="line"><span>│   │   ├── assets/               # CSS, global styles</span></span>
+<span class="line"><span>│   │   ├── components/           # Generic UI widgets and layout shells</span></span>
+<span class="line"><span>│   │   ├── config/               # Environment constants</span></span>
+<span class="line"><span>│   │   ├── contexts/             # React Auth context providers</span></span>
+<span class="line"><span>│   │   ├── features/             # Domain-specific components (auth, crm, challans)</span></span>
+<span class="line"><span>│   │   ├── hooks/                # Custom React hooks</span></span>
+<span class="line"><span>│   │   ├── routes/               # React Router config and Role guards</span></span>
+<span class="line"><span>│   │   ├── services/             # Axios API client setup</span></span>
+<span class="line"><span>│   │   ├── types/                # Frontend TS interfaces</span></span>
+<span class="line"><span>│   │   └── utils/                # Formatters, helpers</span></span>
+<span class="line"><span>├── server/                       # Express Backend</span></span>
+<span class="line"><span>│   ├── src/</span></span>
+<span class="line"><span>│   │   ├── config/               # Database pool and env parsing</span></span>
+<span class="line"><span>│   │   ├── controllers/          # HTTP request handlers</span></span>
+<span class="line"><span>│   │   ├── middleware/           # Error, Auth, RBAC, and Validation handlers</span></span>
+<span class="line"><span>│   │   ├── models/               # Zod schemas and API types</span></span>
+<span class="line"><span>│   │   ├── repositories/         # Database access objects (SQL)</span></span>
+<span class="line"><span>│   │   ├── routes/               # Express router bindings</span></span>
+<span class="line"><span>│   │   ├── services/             # Core business logic orchestrators</span></span>
+<span class="line"><span>│   │   ├── utils/                # Cryptography, JWT, AppError classes</span></span>
+<span class="line"><span>│   │   ├── app.ts                # Express application setup</span></span>
+<span class="line"><span>│   │   └── server.ts             # Entrypoint &amp; listener</span></span>
+<span class="line"><span>│   ├── db/</span></span>
+<span class="line"><span>│   │   ├── migrations/           # Raw SQL schema creation scripts</span></span>
+<span class="line"><span>│   │   └── seeds/                # Initial data seed scripts</span></span>
+<span class="line"><span>│   ├── tests/                    # Vitest Unit and Integration suites</span></span>
+<span class="line"><span>├── docker-compose.yml            # Local development orchestration</span></span>
+<span class="line"><span>└── package.json                  # Root workspace runner</span></span></code></pre></div>`,4)])])}const m=a(t,[["render",r]]);export{h as __pageData,m as default};
