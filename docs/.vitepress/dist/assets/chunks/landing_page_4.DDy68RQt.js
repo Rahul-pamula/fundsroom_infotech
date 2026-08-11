@@ -1,0 +1,1 @@
+const s="/fundsroom_infotech/assets/screenshots/landing_page_2.png",n="/fundsroom_infotech/assets/screenshots/landing_page_3.png",o="/fundsroom_infotech/assets/screenshots/landing_page_4.png";export{s as _,n as a,o as b};
