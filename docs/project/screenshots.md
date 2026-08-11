@@ -37,3 +37,14 @@ Below is a visual overview of the Mini ERP + CRM Operations Portal based on impl
 *   ![Accounts Products List](/assets/screenshots/accounts_products.png)
 *   ![Accounts Stock Ledger](/assets/screenshots/accounts_stock.png)
 *   ![Accounts Challan Audit](/assets/screenshots/accounts_challans.png)
+
+## Deployment Screenshots
+
+### Vercel — Frontend
+*   ![Fundsroom Frontend — Vercel Deployment](/assets/screenshots/vercel_screenshot.png)
+
+### Render — Backend
+*   ![Fundsroom Backend — Render Deployment](/assets/screenshots/render_screenshot.png)
+
+### Supabase — Database
+*   ![Fundsroom PostgreSQL database on Supabase](/assets/screenshots/supabase_screenshot.png)

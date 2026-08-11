@@ -11,7 +11,7 @@ hero:
       link: "/overview/introduction"
     - theme: alt
       text: "Open Application"
-      link: "#"
+      link: "https://fundsroom-infotech-client.vercel.app/"
 ---
 
 <style>
@@ -95,7 +95,7 @@ A modern enterprise operations platform connecting Customer Relationship Managem
   </a>
   <a href="./deployment/architecture" class="content-card">
     <h3>🌐 Deployment</h3>
-    <p>Deploy frontend to Vercel, backend to Railway, and DB to Supabase.</p>
+    <p>Deploy frontend to Vercel, backend to Render, and DB to Supabase.</p>
   </a>
 </div>
 

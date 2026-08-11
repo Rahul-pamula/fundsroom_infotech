@@ -2,6 +2,14 @@
 
 Mini ERP + CRM Operations Portal is a production-style assessment project for Fundsroom Infotech. It combines a React client with an Express + PostgreSQL backend to manage customer operations, inventory, stock movements, and transaction-safe sales challans.
 
+## Live Demo
+
+Frontend:  
+[Open Fundsroom Application](https://fundsroom-infotech-client.vercel.app/)
+
+Backend:  
+[Open Backend API](https://fundsroom-api-u6tm.onrender.com)
+
 ## Architecture
 
 - Frontend: React, TypeScript, Vite, React Router, TanStack Query, React Hook Form, Zod, Tailwind CSS, Axios
