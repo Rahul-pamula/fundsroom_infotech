@@ -1,228 +1,148 @@
 # Mini ERP + CRM Operations Portal
 
-Mini ERP + CRM Operations Portal is a production-style assessment project for Fundsroom Infotech. It combines a React client with an Express + PostgreSQL backend to manage customer operations, inventory, stock movements, and transaction-safe sales challans.
+A production-style ERP + CRM operations platform built for Fundsroom Infotech to manage customers, products, inventory, stock movements, sales challans, and role-based operations.
 
-## Live Demo
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/-Express-000000?style=flat&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![Supabase](https://img.shields.io/badge/-Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white)
+![JWT](https://img.shields.io/badge/-JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white)
+
+## 🚀 Live Demo
 
 Frontend:  
-[Open Fundsroom Application](https://fundsroom-infotech-client.vercel.app/)
+[🌐 Open Fundsroom Application](https://fundsroom-infotech-client.vercel.app/)
 
 Backend:  
-[Open Backend API](https://fundsroom-api-u6tm.onrender.com)
+[⚙️ Open Backend API](https://fundsroom-api-u6tm.onrender.com)
 
-## Architecture
+## 📚 Full Documentation
 
-- Frontend: React, TypeScript, Vite, React Router, TanStack Query, React Hook Form, Zod, Tailwind CSS, Axios
-- Backend: Node.js, TypeScript, Express, Zod, JWT, bcrypt, pg
-- Database: PostgreSQL via Supabase `DATABASE_URL`
-- Pattern: `Route -> Middleware -> Controller -> Service -> Repository -> PostgreSQL`
+The complete project documentation covers:
 
-## Key Features
+- Requirements
+- SDLC
+- System Design
+- Architecture
+- Authentication & RBAC
+- Database Design
+- Backend API
+- Frontend
+- Features
+- Testing
+- Deployment
+- User Guide
+- Screenshots
+- Limitations & Future Scope
 
-- JWT authentication with role-based access control
-- Customer CRM with follow-up tracking
-- Product and inventory management
-- Auditable stock movement ledger
-- Draft, confirm, and cancel sales challans
-- Transaction-safe stock deduction with PostgreSQL row locking
-- Dashboard summaries and low-stock visibility
-- Centralized API response and error formatting
+[📖 Read the Full Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
 
-## Repository Structure
+## 🖥️ Product Preview
+
+<p align="center">
+  <img src="docs/public/assets/screenshots/landing_page_1.png" alt="Fundsroom Mini ERP + CRM Operations Portal" width="900">
+</p>
+
+## 📌 Overview
+
+Fundsroom Infotech's Mini ERP + CRM Operations Portal is a full-stack business operations system designed for wholesale/distribution workflows. 
+
+It brings together:
+- Customer CRM
+- Product management
+- Inventory
+- Stock movements
+- Sales challans
+- Authentication
+- RBAC
+
+## 🎯 Problem
+
+Businesses need different teams such as:
+- Sales
+- Warehouse
+- Accounts
+- Administration
+
+to work with shared customer, product, inventory, and sales information while maintaining role-specific access.
+
+## 💡 Solution
+
+The portal provides a centralized operations system with:
+- JWT authentication
+- Role-based access control
+- CRM workflows
+- Inventory management
+- Transaction-safe stock operations
+- Sales challan workflows
+- PostgreSQL persistence
+
+## ✨ Key Features
+
+### 🔐 Authentication & RBAC
+JWT authentication with roles for: `ADMIN`, `SALES`, `WAREHOUSE`, and `ACCOUNTS`.
+
+### 👥 Customer CRM
+Customer management, search, details, and follow-ups.
+
+### 📦 Products & Inventory
+Product catalog, stock levels, low-stock visibility, and stock adjustments.
+
+### 📊 Stock Ledger
+Auditable IN / OUT stock movement history.
+
+### 🧾 Sales Challans
+Draft, confirm, and cancel workflows with transaction-safe stock deduction.
+
+### 📈 Dashboard
+Operational summaries, customer statistics, inventory visibility, and recent activity.
+
+## 📸 Application Preview
+
+<p align="center">
+  <img src="docs/public/assets/screenshots/admin_dashboard.png" alt="Dashboard" width="400">
+  <img src="docs/public/assets/screenshots/admin_customer.png" alt="Customer CRM" width="400">
+  <img src="docs/public/assets/screenshots/admin_products.png" alt="Products Inventory" width="400">
+  <img src="docs/public/assets/screenshots/admin_challans.png" alt="Challans" width="400">
+  <img src="docs/public/assets/screenshots/rbac_signin.png" alt="Login & RBAC" width="400">
+</p>
+
+## 🛡️ Role-Based Access
+
+| Role | Purpose |
+|---|---|
+| ADMIN | Full operational control |
+| SALES | Customer and sales workflows |
+| WAREHOUSE | Inventory and stock operations |
+| ACCOUNTS | Customer, product and challan access |
+
+[View Authentication & RBAC Documentation →](https://rahul-pamula.github.io/fundsroom_infotech/)
+
+## 🏗️ Architecture
 
 ```text
-client/   React SPA
-server/   Express API
-docs/     Research and implementation audit
+                    ┌─────────────────┐
+                    │      User       │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │ React Frontend  │
+                    │    Vercel       │
+                    └────────┬────────┘
+                             │ HTTPS
+                             ▼
+                    ┌─────────────────┐
+                    │ Express Backend │
+                    │     Render      │
+                    └────────┬────────┘
+                             │ pg
+                             ▼
+                    ┌─────────────────┐
+                    │   PostgreSQL    │
+                    │    Supabase     │
+                    └─────────────────┘
 ```
-
-## Prerequisites
-
-- Node.js 20+
-- npm 10+
-- PostgreSQL 16+ or Supabase PostgreSQL
-
-## Environment Variables
-
-### Root `.env`
-
-Existing Supabase values are preserved:
-
-```env
-SUPABASE_URL=
-SUPABASE_ANON_KEY=
-```
-
-### Backend `server/.env`
-
-```env
-NODE_ENV=development
-PORT=5000
-DATABASE_URL=postgres://...
-JWT_SECRET=replace-with-secure-secret
-JWT_EXPIRES_IN=12h
-CLIENT_URL=http://localhost:5173
-SUPABASE_URL=
-SUPABASE_ANON_KEY=
-```
-
-### Frontend `client/.env`
-
-```env
-VITE_API_BASE_URL=http://localhost:5000/api/v1
-```
-
-Example files are included:
-
-- `.env.example`
-- [client/.env.example](/Users/rahul/Desktop/fundsroom_infotech/client/.env.example)
-- [server/.env.example](/Users/rahul/Desktop/fundsroom_infotech/server/.env.example)
-
-## Local Setup
-
-1. Install dependencies:
-   `npm install`
-2. Create `server/.env` and `client/.env`
-3. Point `DATABASE_URL` to your Supabase PostgreSQL connection string or local PostgreSQL instance
-4. Run migrations:
-   `npm run migrate --workspace server`
-5. Seed data:
-   `npm run seed --workspace server`
-6. Start both apps:
-   `npm run dev`
-
-## Database Setup
-
-- Migrations live in [server/db/migrations/001_initial_schema.sql](/Users/rahul/Desktop/fundsroom_infotech/server/db/migrations/001_initial_schema.sql)
-- Seed guidance lives in [server/db/seeds/README.md](/Users/rahul/Desktop/fundsroom_infotech/server/db/seeds/README.md)
-- Backend database access is implemented through `pg`; the frontend never talks directly to Supabase for CRUD
-
-## Migration Instructions
-
-```bash
-npm run migrate --workspace server
-```
-
-## Seed Instructions
-
-```bash
-npm run seed --workspace server
-```
-
-## Test Credentials
-
-Created by the seed script:
-
-- `admin@fundsroom.local` / `Password123!`
-- `sales@fundsroom.local` / `Password123!`
-- `warehouse@fundsroom.local` / `Password123!`
-- `accounts@fundsroom.local` / `Password123!`
-
-## Running Frontend
-
-```bash
-npm run dev:client
-```
-
-## Running Backend
-
-```bash
-npm run dev:server
-```
-
-## Testing
-
-```bash
-npm run test
-```
-
-Notes:
-
-- Unit tests run without a live database.
-- Integration and concurrency tests are present under `server/tests/integration`.
-- To execute database-backed integration tests, supply a working test database and set:
-  `RUN_DB_TESTS=true`
-
-## Build and Quality Checks
-
-```bash
-npm run typecheck
-npm run lint
-npm run test
-npm run build
-```
-
-## API Summary
-
-### Auth
-
-- `POST /api/v1/auth/login`
-
-### Customers
-
-- `GET /api/v1/customers`
-- `POST /api/v1/customers`
-- `GET /api/v1/customers/:id`
-- `PUT /api/v1/customers/:id`
-- `POST /api/v1/customers/:id/followups`
-
-### Products and Inventory
-
-- `GET /api/v1/products`
-- `POST /api/v1/products`
-- `PUT /api/v1/products/:id`
-- `POST /api/v1/products/:id/adjust-stock`
-- `GET /api/v1/stock-movements`
-
-### Challans
-
-- `GET /api/v1/challans`
-- `POST /api/v1/challans`
-- `GET /api/v1/challans/:id`
-- `PUT /api/v1/challans/:id`
-- `POST /api/v1/challans/:id/confirm`
-- `POST /api/v1/challans/:id/cancel`
-
-### Dashboard
-
-- `GET /api/v1/dashboard/summary`
-
-## Docker
-
-Local Docker support is included for reproducible development:
-
-- [server/Dockerfile](/Users/rahul/Desktop/fundsroom_infotech/server/Dockerfile)
-- [docker-compose.yml](/Users/rahul/Desktop/fundsroom_infotech/docker-compose.yml)
-
-Start the stack with:
-
-```bash
-docker compose up -d --build
-```
-
-## CI/CD
-
-A lightweight GitHub Actions workflow is included at:
-
-- [.github/workflows/ci.yml](/Users/rahul/Desktop/fundsroom_infotech/.github/workflows/ci.yml)
-
-It runs:
-
-- dependency install
-- typecheck
-- lint
-- test
-- build
-
-## Deployment Notes
-
-- Frontend is intended for Vercel or Netlify
-- Backend is intended for Render or Railway
-- Database provider is Supabase PostgreSQL
-- Use the Supabase PgBouncer connection string for production `DATABASE_URL`
-
-## Known Limitations
-
-- The frontend currently focuses on core operational flows and not advanced UI polish such as bulk editing or printable challan exports.
-- Integration tests are implemented but require a real PostgreSQL test database to be enabled.
-- Local Docker uses PostgreSQL for reproducible development; deployed environments should still use Supabase as the managed provider.
