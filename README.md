@@ -1,5 +1,9 @@
 # Mini ERP + CRM Operations Portal
 
+> **[ 📖 README ](README.md) &nbsp; | &nbsp; [ 🛠️ Setup Guide ](SETUP.md) &nbsp; | &nbsp; [ 🌐 Full Documentation ](https://rahul-pamula.github.io/fundsroom_infotech/)**
+
+---
+
 A production-style ERP + CRM operations platform built for Fundsroom Infotech to manage customers, products, inventory, stock movements, sales challans, and role-based operations.
 
 ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black)
