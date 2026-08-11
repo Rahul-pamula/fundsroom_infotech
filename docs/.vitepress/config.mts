@@ -3,14 +3,14 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "FUNDSROOM INFOTECH",
   description: "Mini ERP + CRM Operations Portal Documentation",
-  cleanUrls: true,
+  cleanUrls: false,
   appearance: 'dark', // support dark/light mode toggle
   base: '/fundsroom_infotech/', // for GitHub Pages
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Documentation', link: '/overview/introduction' },
-      { text: 'Application', link: '#' },
+      { text: 'Application', link: 'https://fundsroom-infotech-client.vercel.app/' },
       { text: 'GitHub', link: 'https://github.com/Rahul-pamula/fundsroom_infotech' }
     ],
     search: {

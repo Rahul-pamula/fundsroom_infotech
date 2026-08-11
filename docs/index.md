@@ -54,23 +54,23 @@ A modern enterprise operations platform connecting Customer Relationship Managem
 ## Platform at a glance
 
 <div class="feature-grid">
-  <a href="./features/crm" class="content-card">
+  <a href="./features/crm.html" class="content-card">
     <h3>👥 Customer CRM</h3>
     <p>Manage customer profiles, firm details, leads, and historical interaction workflows.</p>
   </a>
-  <a href="./features/inventory" class="content-card">
+  <a href="./features/inventory.html" class="content-card">
     <h3>📦 Inventory & Stock</h3>
     <p>Track product catalogs, pricing, warehousing locations, and stock movements.</p>
   </a>
-  <a href="./features/challans" class="content-card">
+  <a href="./features/challans.html" class="content-card">
     <h3>📄 Sales Challans</h3>
     <p>Generate, draft, and confirm sales challans with integrated pessimistic locking.</p>
   </a>
-  <a href="./security/authentication" class="content-card">
+  <a href="./security/authentication.html" class="content-card">
     <h3>🛡️ Role-Based Access</h3>
     <p>Strict authoritative boundaries enforcing permissions for Admin, Sales, Warehouse, and Accounts.</p>
   </a>
-  <a href="./system-design/architecture" class="content-card">
+  <a href="./system-design/architecture.html" class="content-card">
     <h3>🏗️ System Architecture</h3>
     <p>Explore the monolithic Express backend, React frontend, and PostgreSQL 3NF schema.</p>
   </a>
@@ -85,15 +85,15 @@ A modern enterprise operations platform connecting Customer Relationship Managem
 ## Explore the System
 
 <div class="feature-grid">
-  <a href="./getting-started/quick-start" class="content-card">
+  <a href="./getting-started/quick-start.html" class="content-card">
     <h3>🚀 Quick Start</h3>
     <p>Bring the local stack up fast and understand the minimum setup path.</p>
   </a>
-  <a href="./development/testing" class="content-card">
+  <a href="./development/testing.html" class="content-card">
     <h3>🧪 Testing</h3>
     <p>Understand validation rules and test coverage across the system.</p>
   </a>
-  <a href="./deployment/architecture" class="content-card">
+  <a href="./deployment/architecture.html" class="content-card">
     <h3>🌐 Deployment</h3>
     <p>Deploy frontend to Vercel, backend to Render, and DB to Supabase.</p>
   </a>
