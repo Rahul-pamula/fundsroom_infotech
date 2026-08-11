@@ -1,1 +1,0 @@
-const s="/fundsroom_infotech/assets/screenshots/vercel_screenshot.png",e="/fundsroom_infotech/assets/screenshots/render_screenshot.png",o="/fundsroom_infotech/assets/screenshots/supabase_screenshot.png";export{s as _,e as a,o as b};
