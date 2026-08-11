@@ -82,7 +82,7 @@ export default defineConfig({
         items: [
           { text: 'Deployment Architecture', link: '/deployment/architecture' },
           { text: 'Vercel (Frontend)', link: '/deployment/frontend' },
-          { text: 'Railway (Backend)', link: '/deployment/backend' },
+          { text: 'Render (Backend)', link: '/deployment/backend' },
           { text: 'Supabase (Database)', link: '/deployment/database' }
         ]
       },
