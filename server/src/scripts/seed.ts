@@ -1,10 +1,16 @@
 import { pool } from '../config/database.js';
 import { hashPassword } from '../utils/password.js';
 
+const seedPassword = process.env.SEED_PASSWORD;
+
+if (!seedPassword) {
+  throw new Error('SEED_PASSWORD is required to run the seed script. Set it in server/.env or the process environment.');
+}
+
 const run = async () => {
   console.log('Seeding Supabase database with realistic Indian B2B data...');
 
-  const passwordHash = await hashPassword('Password123!');
+  const passwordHash = await hashPassword(seedPassword);
 
   // 1. Seed users
   const users = [
@@ -133,9 +139,8 @@ const run = async () => {
   // 5. Seed stock movements (Opening inventories)
   await pool.query('DELETE FROM stock_movements');
   for (const p of products) {
-    if (p.stock <= 0) continue; // Skip if stock is zero to satisfy quantity > 0 check constraint
+    if (p.stock <= 0) continue;
     const dbProd = seededProducts[p.sku];
-    // Write opening inventory record
     await pool.query(
       `
         INSERT INTO stock_movements (product_id, quantity, movement_type, reason, reference_type, created_by)
@@ -149,8 +154,6 @@ const run = async () => {
   await pool.query('DELETE FROM challan_items');
   await pool.query('DELETE FROM challans');
 
-  // Let's create one CONFIRMED challan
-  // It deducts stock. We should create a stock movement OUT matching this.
   const challanNo1 = 'CH-2026-001';
   const c1Res = await pool.query(
     `
@@ -165,7 +168,6 @@ const run = async () => {
   const wKey = seededProducts['ELEC-WKEY-01'];
   const ucHub = seededProducts['ELEC-UCHUB-02'];
 
-  // Add items
   await pool.query(
     `
       INSERT INTO challan_items (challan_id, product_id, quantity, snapshot_product_name, snapshot_sku, snapshot_unit_price)
@@ -176,7 +178,6 @@ const run = async () => {
     [challan1Id, wKey.id, wKey.price, ucHub.id, ucHub.price]
   );
 
-  // Insert corresponding OUT stock movements for confirmed challan
   await pool.query(
     `
       INSERT INTO stock_movements (product_id, quantity, movement_type, reason, reference_type, reference_id, created_by)
@@ -187,7 +188,6 @@ const run = async () => {
     [wKey.id, challan1Id, salesId, ucHub.id]
   );
 
-  // Create one DRAFT challan (does not deduct stock)
   const challanNo2 = 'CH-2026-002';
   const c2Res = await pool.query(
     `
