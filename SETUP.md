@@ -1,99 +1,108 @@
 # 🛠️ Setup Guide
 
-Get the **Fundsroom Mini ERP + CRM Operations Portal** running on your local machine in minutes.
+Get the **Fundsroom Mini ERP + CRM Operations Portal** running on your local machine.
 
 ---
 
 ## Prerequisites
 
-Ensure you have the following installed on your system:
+Ensure you have:
 - **Node.js** (v18 or higher)
 - **Docker** and **Docker Compose**
 - **Git**
 
 ## 1. Installation
 
-**Clone the repository:**
 ```bash
 git clone https://github.com/Rahul-pamula/fundsroom_infotech.git
 cd fundsroom_infotech
 ```
 
-**Install dependencies:**
+Install dependencies:
+
 ```bash
-# Frontend
 cd client
 npm install
 
-# Backend
 cd ../server
 npm install
 ```
 
 ## 2. Environment Setup
 
-Create `.env` files in both the client and server directories. 
+Create `.env` files in both the client and server directories.
 
 **Backend (`server/.env`):**
+
 ```env
 PORT=5001
 NODE_ENV=development
 CLIENT_URL=http://localhost:5173
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/fundsroom_db
-JWT_SECRET=your_super_secret_jwt_key_change_me
+JWT_SECRET=<generate-a-long-random-secret>
+JWT_EXPIRES_IN=12h
+SEED_PASSWORD=<choose-a-local-development-password>
 ```
 
+Never commit real secrets or development passwords to Git.
+
 **Frontend (`client/.env`):**
+
 ```env
 VITE_API_BASE_URL=http://localhost:5001/api
 ```
 
 ## 3. Database Setup
 
-You can run the PostgreSQL database using either **Docker** or a **Local PostgreSQL Installation**.
+### Option A: Docker (Recommended)
 
-### Option A: Using Docker (Recommended)
-Start the local PostgreSQL database using the provided Docker Compose file:
 ```bash
 docker-compose up -d
 ```
 
-### Option B: Local PostgreSQL Installation
-If you do not have Docker installed, you can use a local installation of PostgreSQL:
-1. Ensure PostgreSQL is installed and running on your machine.
-2. Open your `psql` terminal or pgAdmin.
-3. Create a new database named `fundsroom_db`.
-4. Update the `DATABASE_URL` in `server/.env` to match your local PostgreSQL credentials (e.g. `postgresql://your_user:your_password@localhost:5432/fundsroom_db`).
+### Option B: Local PostgreSQL
+
+1. Ensure PostgreSQL is installed and running.
+2. Create a database named `fundsroom_db`.
+3. Update `DATABASE_URL` in `server/.env` with your local credentials.
 
 ## 4. Migration and Seeding
 
-Run the database migrations and seed it with initial admin users, products, and customers.
+From the `server` directory, use the scripts defined in `server/package.json`:
 
 ```bash
 cd server
-npm run db:migrate
-npm run db:seed
+npm run migrate
+npm run seed
 ```
+
+The seed script requires `SEED_PASSWORD`. It is used only to create local seeded users and is not stored in source control.
 
 ## 5. Running the Application
 
-You can now start both the backend and frontend development servers.
+**Terminal 1 — Backend:**
 
-**Terminal 1 (Backend):**
 ```bash
 cd server
 npm run dev
 ```
 
-**Terminal 2 (Frontend):**
+**Terminal 2 — Frontend:**
+
 ```bash
 cd client
 npm run dev
 ```
 
 ## 6. Access the Platform
-The application is now accessible at `http://localhost:5173`. 
-You can log in using the seeded admin credentials:
 
-- **Email:** `admin@fundsroom.local`
-- **Password:** `Password123!`
+Open `http://localhost:5173`.
+
+The seeded accounts use the email addresses below. Their password is the private value you supplied as `SEED_PASSWORD`:
+
+- `admin@fundsroom.local`
+- `sales@fundsroom.local`
+- `warehouse@fundsroom.local`
+- `accounts@fundsroom.local`
+
+Do not publish the seed password in documentation, source code, screenshots, or issue reports.
